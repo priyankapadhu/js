@@ -1,0 +1,27 @@
+<html>
+<head>
+<h2>form validation for selection mode</h2>
+</head>
+<body>
+Select Fruit:
+<select id="ddlFruits">
+    <option value=""></option>
+    <option value="1">Apple</option>
+    <option value="2">Mango</option>
+    <option value="3">Orange</option>
+</select>
+<input type="submit" value="Validate" onclick="return Validate()" />
+<script type="text/javascript">
+    function Validate() {
+        var ddlFruits = document.getElementById("ddlFruits");
+        if (ddlFruits.value == "") {
+            //If the "Please Select" option is selected display error.
+            alert("Please select an option!");
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
+
